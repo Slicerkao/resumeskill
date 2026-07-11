@@ -1,0 +1,6 @@
+job_id: example
+claims:
+  - location: work.apple.health
+    text: Developed an auditable reference-based, multi-stage LLM evaluator for multimodal health AI.
+    evidence_ids:
+      - health_action_judge

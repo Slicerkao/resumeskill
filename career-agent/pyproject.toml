@@ -1,0 +1,9 @@
+[project]
+name = "resumeskill"
+version = "0.1.0"
+description = "Evidence-grounded career knowledge graph and resume compiler"
+requires-python = ">=3.10"
+dependencies = ["PyYAML>=6.0"]
+
+[tool.ruff]
+line-length = 100

@@ -1,0 +1,62 @@
+schema_version: 1
+experience_id: exp_apple_vision_failure_discovery
+claims:
+- id: claim_vision_failure_discovery
+  statement: Developed embedding-driven failure discovery using similarity search,
+    clustering, OOD analysis, and position-level error analysis.
+  supported_by:
+  - vision_action_failure_discovery
+  confidence: verified
+  role_families:
+  - ml_evaluation
+  - computer_vision
+  - applied_scientist
+  risk: low
+- id: claim_vision_fairness
+  statement: Designed Bayesian per-subject fairness analysis using Beta posteriors
+    to estimate demographic-gap risk against a product threshold.
+  supported_by:
+  - vision_action_fairness
+  confidence: verified
+  role_families:
+  - responsible_ai
+  - applied_scientist
+  - computer_vision
+  risk: low
+- id: claim_vision_model_repair
+  statement: Personally trained and fine-tuned vision models on VLM-discovered and
+    relighting-derived failure slices.
+  supported_by:
+  - vision_action_model_repair
+  confidence: verified
+  role_families:
+  - computer_vision
+  - ml_engineering
+  - applied_scientist
+  risk: low
+- id: claim_vision_quality_metrics
+  statement: Contributed to Vision Pro hand-tracking quality associated with missed
+    detections below 2% and false positives below 5 per hour.
+  supported_by:
+  - vision_outcome_quality
+  confidence: imported_resume
+  role_families:
+  - computer_vision
+  - ml_evaluation
+  risk: high
+  required_qualifiers:
+  - contributed to
+  - metric context must be confirmed
+  forbidden_inferences:
+  - sole causation
+- id: claim_vision_eccv
+  statement: Co-authored accepted ECCV research on fine-grained, grounded error-slice
+    discovery for multi-instance vision tasks.
+  supported_by:
+  - research_eccv_slice_discovery
+  confidence: verified
+  role_families:
+  - research_scientist
+  - applied_scientist
+  - computer_vision
+  risk: low

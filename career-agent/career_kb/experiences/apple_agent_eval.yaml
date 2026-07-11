@@ -1,0 +1,36 @@
+schema_version: 1
+id: exp_apple_multimodal_agent_eval
+type: project
+organization: Apple
+role_context: ML Data Scientist
+status: ongoing
+confidence: verified
+summary: Evaluation research and prototyping for an open-ended, multi-turn multimodal conversational agent.
+actions:
+  - id: agent_action_human_factors
+    statement: Translated human-factors insights into user-centered KPIs and human-evaluation protocols.
+    ownership: personal_contribution
+    confidence: verified
+  - id: agent_action_simulation
+    statement: Built and experimented with a simulated-user agent to stress-test the product agent and uncover scenario-specific weaknesses.
+    ownership: personal_contribution
+    confidence: verified
+  - id: agent_action_judge
+    statement: Built an agent-as-judge workflow to audit long multimodal conversation transcripts.
+    ownership: personal_contribution
+    confidence: verified
+  - id: agent_action_metrics
+    statement: Explored metrics including per-turn misalignment with user intent and false updates to inferred user internal state.
+    ownership: personal_contribution
+    confidence: verified
+caveats:
+  - The project is ongoing; avoid claiming finalized production impact.
+  - Do not imply ownership of the product agent or its memory architecture.
+  - User simulation fidelity remains an active evaluation question, not a solved capability.
+skills:
+  - agent evaluation
+  - user simulation
+  - multimodal agents
+  - long-transcript judging
+  - human factors
+  - behavioral taxonomy

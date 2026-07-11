@@ -1,0 +1,18 @@
+schema_version: 1
+id: exp_ambarella_quantization
+type: employment
+organization: Ambarella
+role_context: Algorithm and Architecture Intern, Deep Learning Compression
+date_range: 2019-06 to 2019-08
+confidence: imported_resume
+actions:
+  - id: ambarella_action_saliency
+    statement: Developed a saliency-score heuristic for neural-network quantization, reducing an exponential search formulation to a linear-time heuristic and validating performance.
+    confidence: imported_resume
+  - id: ambarella_action_mixed_precision
+    statement: Proposed a mixed-precision quantization prediction algorithm integrated into the company's software product.
+    confidence: imported_resume
+skills:
+  - neural network quantization
+  - model compression
+  - algorithm development

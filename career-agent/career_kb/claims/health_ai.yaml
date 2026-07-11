@@ -1,0 +1,52 @@
+schema_version: 1
+experience_id: exp_apple_health_ai_eval
+claims:
+- id: claim_health_expert_aligned_eval
+  statement: Built expert-aligned evaluation systems for a multimodal health-related
+    AI product.
+  supported_by:
+  - health_action_goldset
+  - health_action_labeling
+  - health_action_judge
+  confidence: verified
+  role_families:
+  - llm_evaluation
+  - applied_scientist
+  - multimodal_evaluation
+  risk: low
+- id: claim_health_auditable_judge
+  statement: Developed a reference-based, multi-stage LLM evaluator with auditable
+    intermediate reasoning.
+  supported_by:
+  - health_action_judge
+  confidence: verified
+  role_families:
+  - llm_evaluation
+  - ai_quality
+  - applied_scientist
+  risk: low
+- id: claim_health_90_alignment
+  statement: Reached 90% alignment with health experts on a curated 40-example gold
+    set.
+  supported_by:
+  - health_outcome_alignment
+  confidence: verified
+  role_families:
+  - llm_evaluation
+  - applied_scientist
+  risk: medium
+  required_qualifiers:
+  - on a 40-example gold set
+  forbidden_inferences:
+  - 90% production accuracy
+  - clinical accuracy
+- id: claim_health_prompt_iteration
+  statement: Improved evaluator alignment through DSPy-style prompt iteration and
+    expert review.
+  supported_by:
+  - health_action_iteration
+  confidence: verified
+  role_families:
+  - llm_evaluation
+  - prompt_engineering
+  risk: low

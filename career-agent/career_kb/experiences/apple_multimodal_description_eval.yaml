@@ -1,0 +1,20 @@
+schema_version: 1
+id: exp_apple_multimodal_description_eval
+type: project
+organization: Apple
+role_context: ML Data Scientist
+status: completed_or_current_unknown
+confidence: imported_resume
+summary: Evaluation of free-form image descriptions produced by internal multimodal models.
+actions:
+  - id: description_action_scene_graph
+    statement: Developed multimodal evaluation methods using Davidsonian scene-graph representations for fine-grained analysis of OCR, counting, attribute, and spatial-reasoning failures.
+    ownership: personal_contribution
+    confidence: imported_resume
+caveats:
+  - Confirm project timing, individual ownership, and exact model/product scope before expanding this claim.
+skills:
+  - multimodal evaluation
+  - scene graphs
+  - OCR evaluation
+  - spatial reasoning evaluation

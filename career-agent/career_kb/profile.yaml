@@ -1,0 +1,41 @@
+schema_version: 1
+person:
+  preferred_name: Sam Kao
+  resume_name: PingSheng Kao
+  location: Santa Clara, California
+  email: samk840125@gmail.com
+  linkedin: pingshengkao
+current_position:
+  company: Apple
+  title: ML Data Scientist
+  start: 2020-07
+  status: current
+career_direction:
+  preferred_domains:
+    - multimodal and LLM evaluation
+    - human alignment and human evaluation
+    - agent evaluation and failure analysis
+    - user simulation
+    - AI quality and safety
+  preferred_role_families:
+    - evaluation engineer
+    - applied scientist
+    - ML engineer focused on evaluation
+    - AI engineer with product-building responsibility
+  avoid_positioning:
+    - traditional QA automation
+    - manual testing as primary identity
+    - generic analytics and dashboard reporting
+    - prompt-tuning-only positioning
+education:
+  - id: edu_umich_ms
+    institution: University of Michigan, Ann Arbor
+    degree: M.S. in Computer Science and Engineering
+    date_range: 2018-2020
+    confidence: imported_resume
+  - id: edu_ntu_bs
+    institution: National Taiwan University
+    degree: B.S. in Electronic Engineering
+    date_range: 2013-2017
+    gpa: 3.9/4.0
+    confidence: imported_resume

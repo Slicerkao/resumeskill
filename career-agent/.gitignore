@@ -1,0 +1,25 @@
+# LaTeX build output
+*.aux
+*.log
+*.out
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.xdv
+resume/current/resume.pdf
+
+# Local-only font assets copied from the user's original CV package
+resume/current/fonts/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Generated application packets
+outputs/*
+!outputs/.gitkeep
+
+# Local scratch
+inbox/*
+!inbox/.gitkeep

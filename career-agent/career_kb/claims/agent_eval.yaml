@@ -1,0 +1,50 @@
+schema_version: 1
+experience_id: exp_apple_multimodal_agent_eval
+claims:
+- id: claim_agent_user_simulation
+  statement: Built a simulated-user agent to stress-test an open-ended multimodal
+    conversational agent and expose scenario-specific failures.
+  supported_by:
+  - agent_action_simulation
+  confidence: verified
+  role_families:
+  - agent_evaluation
+  - applied_scientist
+  - ai_quality
+  risk: medium
+  required_qualifiers:
+  - project is ongoing
+  forbidden_inferences:
+  - production-proven simulator fidelity
+- id: claim_agent_judge
+  statement: Built an agent-as-judge workflow for auditing long multimodal conversation
+    transcripts.
+  supported_by:
+  - agent_action_judge
+  confidence: verified
+  role_families:
+  - agent_evaluation
+  - llm_evaluation
+  risk: low
+- id: claim_agent_human_factors
+  statement: Translated human-factors insights into user-centered KPIs and human-evaluation
+    protocols.
+  supported_by:
+  - agent_action_human_factors
+  confidence: verified
+  role_families:
+  - human_ai_interaction
+  - agent_evaluation
+  risk: low
+- id: claim_agent_metrics
+  statement: Designed and explored metrics for per-turn user-intent misalignment and
+    false updates to inferred user state.
+  supported_by:
+  - agent_action_metrics
+  confidence: verified
+  role_families:
+  - agent_evaluation
+  - human_ai_interaction
+  risk: medium
+  forbidden_inferences:
+  - finalized production KPI ownership

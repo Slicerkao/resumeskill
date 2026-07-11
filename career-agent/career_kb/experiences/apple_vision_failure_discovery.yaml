@@ -1,0 +1,47 @@
+schema_version: 1
+id: exp_apple_vision_failure_discovery
+type: project
+organization: Apple
+role_context: ML Data Scientist
+status: completed
+confidence: verified
+summary: Failure discovery, model repair, and fairness analysis for production vision systems including Vision Pro hand tracking.
+actions:
+  - id: vision_action_failure_discovery
+    statement: Developed embedding-driven failure discovery using similarity search, clustering, out-of-distribution analysis, and per-position failure analysis.
+    ownership: personal_contribution
+    confidence: verified
+  - id: vision_action_fairness
+    statement: Designed Bayesian per-subject fairness analysis using Beta posteriors to estimate true success rates and the risk of demographic gaps exceeding a 10% product threshold.
+    ownership: personal_contribution
+    confidence: verified
+  - id: vision_action_model_repair
+    statement: Personally trained and fine-tuned vision models on VLM-discovered or relighting-derived slices and compared targeted repair against alternative slice-discovery approaches.
+    ownership: personal_contribution
+    confidence: verified
+outcomes:
+  - id: vision_outcome_quality
+    statement: Work informed Vision Pro hand-tracking quality improvements associated with missed detections below 2% and false positives below 5 per hour.
+    confidence: imported_resume
+    caveats:
+      - Preserve the distinction between contribution and sole causation.
+      - Confirm metric context before using for a materially different role.
+research:
+  - id: research_eccv_slice_discovery
+    title: Fine-grained and grounded error slice discovery for multi-instance vision tasks
+    venue: ECCV
+    status: accepted
+    arxiv: arXiv:2512.24592
+    confidence: verified
+    caveats:
+      - The earlier working title was SliceLens.
+      - A small percentage-table arithmetic error was corrected before camera-ready; the conclusion remained unchanged but the measured improvement was smaller.
+skills:
+  - failure analysis
+  - embeddings
+  - clustering
+  - similarity search
+  - OOD analysis
+  - Bayesian fairness analysis
+  - vision-model fine-tuning
+  - VLM-assisted slice discovery

@@ -1,0 +1,34 @@
+schema_version: 1
+strategy_id: resume_strategy_default
+status: canonical
+principles:
+  - id: strategy_truth_over_match
+    rule: Prefer an honest partial match over wording that converts adjacent experience into direct experience.
+    source: user_preference
+  - id: strategy_identity
+    rule: Position the candidate around multimodal/LLM evaluation, human alignment, failure analysis, and agent evaluation rather than traditional QA.
+    source: user_preference
+  - id: strategy_specificity
+    rule: Prefer concrete system, method, and outcome descriptions over broad claims such as "advanced AI" or "agentic reliability."
+    source: user_preference
+  - id: strategy_ownership
+    rule: Distinguish personally built components from team or product outcomes.
+    source: user_preference
+  - id: strategy_no_fancy_prompt_only
+    rule: Do not make the profile read as prompt tuning alone; connect prompt iteration to evaluation design, auditability, and expert calibration.
+    source: user_preference
+  - id: strategy_current_project_scope
+    rule: For ongoing agent-evaluation work, emphasize methods and prototypes without fabricating finalized impact.
+    source: user_preference
+  - id: strategy_resume_brevity
+    rule: Use high-information bullets and avoid inflated summaries that repeat the experience section.
+    source: inferred_needs_confirmation
+feedback_memory: []
+update_policy:
+  durable_feedback_examples:
+    - "Never describe this project as clinical diagnosis."
+    - "Use agent-as-judge, not generic LLM-as-judge, for this project."
+    - "I dislike summaries full of abstract adjectives."
+  job_local_feedback_examples:
+    - "For this role, put the vision paper first."
+  instruction: Durable feedback requires a strategy proposal and explicit user approval before canonical update.

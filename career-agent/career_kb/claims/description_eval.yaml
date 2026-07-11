@@ -1,0 +1,15 @@
+schema_version: 1
+experience_id: exp_apple_multimodal_description_eval
+claims:
+- id: claim_description_scene_graph
+  statement: Developed scene-graph-based evaluation for fine-grained OCR, counting,
+    attribute, and spatial-reasoning failures in free-form image descriptions.
+  supported_by:
+  - description_action_scene_graph
+  confidence: imported_resume
+  role_families:
+  - multimodal_evaluation
+  - computer_vision
+  risk: medium
+  required_qualifiers:
+  - confirm ownership and timing before expansion

@@ -1,0 +1,52 @@
+schema_version: 1
+id: exp_apple_health_ai_eval
+type: project
+organization: Apple
+role_context: ML Data Scientist
+status: completed
+confidence: verified
+summary: Built expert-aligned evaluation for a multimodal health-related AI product.
+problems:
+  - id: health_problem_expert_alignment
+    statement: Product outputs needed objective grounding against health-expert judgment while subjective user feedback required a separate protocol.
+actions:
+  - id: health_action_goldset
+    statement: Drove an automated gold-set curation strategy using a heuristic distilled from health-expert ground truth.
+    ownership: personal_contribution
+    confidence: verified
+  - id: health_action_labeling
+    statement: Designed a labeling workflow in which health experts verified evaluator scores and trained non-expert labelers represented product-user feedback.
+    ownership: personal_contribution
+    confidence: verified
+  - id: health_action_judge
+    statement: Developed a reference-based, multi-stage LLM evaluator to keep scoring reasoning auditable.
+    ownership: personal_contribution
+    confidence: verified
+  - id: health_action_iteration
+    statement: Used DSPy-style prompt iteration and expert review to improve evaluator alignment.
+    ownership: personal_contribution
+    confidence: verified
+outcomes:
+  - id: health_outcome_alignment
+    statement: Reached 90% alignment with health experts on a 40-example gold set.
+    confidence: verified
+    metric:
+      value: 0.90
+      denominator: 40
+      unit: agreement_rate
+    caveats:
+      - Do not imply 90% accuracy over all production traffic.
+      - A larger expert-labeled dataset of roughly 200 examples was created after the user left the project and should not be attributed as the user's delivered result.
+skills:
+  - LLM-as-judge
+  - multimodal evaluation
+  - expert alignment
+  - human evaluation
+  - gold-set curation
+  - DSPy
+allowed_claims:
+  - Built expert-aligned multimodal AI evaluation systems.
+  - Developed an auditable reference-based multi-stage LLM evaluator.
+disallowed_claims:
+  - Built a clinical diagnostic system.
+  - Achieved 90% production accuracy.
