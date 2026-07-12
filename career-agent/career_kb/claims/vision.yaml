@@ -35,23 +35,52 @@ claims:
   - applied_scientist
   risk: low
 - id: claim_vision_quality_metrics
-  statement: Contributed to Vision Pro hand-tracking quality associated with missed
-    detections below 2% and false positives below 5 per hour.
+  statement: Contributed to Vision Pro hand-tracking quality, via failure-pattern
+    and aggressor discovery and quality-scorecard development, with final missing-pinch
+    rate below 2% and false positives below 5 per hour.
   supported_by:
   - vision_outcome_quality
-  confidence: imported_resume
+  confidence: verified
   role_families:
   - computer_vision
   - ml_evaluation
-  risk: high
+  risk: medium
   required_qualifiers:
   - contributed to
-  - metric context must be confirmed
   forbidden_inferences:
   - sole causation
+- id: claim_vision_visualization
+  statement: Built performance-trend, error-cluster, and multimodal-data visualizations
+    (Tableau, Voxel51/FiftyOne image-collage clustering) that stakeholders used to
+    identify systematic model failure patterns.
+  supported_by:
+  - vision_action_visualization
+  confidence: verified
+  role_families:
+  - data_visualization
+  - ml_evaluation
+  - computer_vision
+  risk: low
+- id: claim_vision_model_health_reporting
+  statement: Produced leadership-facing model-release reports translating deep-dive
+    failure analysis and regression/improvement attribution into decision metrics,
+    including embedding-clustering diagnosis of unstructured image data and online
+    validation of offline-mined failure patterns.
+  supported_by:
+  - vision_action_model_health_reporting
+  - vision_action_gesture_segmentation
+  confidence: verified
+  role_families:
+  - ml_evaluation
+  - responsible_ai
+  - data_visualization
+  risk: medium
+  required_qualifiers:
+  - reports were team deliverables; the failure analysis and pattern mining were the
+    personal contribution
 - id: claim_vision_eccv
-  statement: Co-authored accepted ECCV research on fine-grained, grounded error-slice
-    discovery for multi-instance vision tasks.
+  statement: Contributed experiments to ECCV-accepted research (GH-ESD) on grounded,
+    hypothesis-driven error-slice discovery for instance-level vision tasks.
   supported_by:
   - research_eccv_slice_discovery
   confidence: verified
@@ -59,4 +88,9 @@ claims:
   - research_scientist
   - applied_scientist
   - computer_vision
-  risk: low
+  risk: medium
+  required_qualifiers:
+  - contributed to experiments; not a listed author
+  forbidden_inferences:
+  - co-authorship
+  - listed author

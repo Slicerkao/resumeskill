@@ -2,13 +2,14 @@ schema_version: 1
 id: exp_apple_vision_failure_discovery
 type: project
 organization: Apple
-role_context: ML Data Scientist
+role_context: ML Data Scientist (Apple hand-tracking / Vision Pro)
+date_range: 2020 to 2023
 status: completed
 confidence: verified
 summary: Failure discovery, model repair, and fairness analysis for production vision systems including Vision Pro hand tracking.
 actions:
   - id: vision_action_failure_discovery
-    statement: Developed embedding-driven failure discovery using similarity search, clustering, out-of-distribution analysis, and per-position failure analysis.
+    statement: Discovered Vision Pro hand-tracking failure patterns, trends, and aggressors using embedding-driven similarity search, clustering, out-of-distribution analysis, and per-position analysis, mining failure clusters such as fast/slow pinch, hand geometric orientation, and hand location, and fed findings back to the model-development team.
     ownership: personal_contribution
     confidence: verified
   - id: vision_action_fairness
@@ -19,22 +20,39 @@ actions:
     statement: Personally trained and fine-tuned vision models on VLM-discovered or relighting-derived slices and compared targeted repair against alternative slice-discovery approaches.
     ownership: personal_contribution
     confidence: verified
+  - id: vision_action_visualization
+    statement: Built performance-trend, error-cluster, and multimodal-data visualizations in Tableau and Voxel51 (FiftyOne), linking embedding-derived error clusters to image collages, that helped the team see systematic issues such as hand-gesture failure patterns.
+    ownership: personal_contribution
+    confidence: verified
+  - id: vision_action_model_health_reporting
+    statement: For each ML model release, produced leadership-facing reports translating user-experience proxy metrics and regression/improvement deep-dive failure analysis into decision-ready findings, attributing regressions to specific ML-system components, using embedding clustering on unstructured image data correlated with failures, estimating per-pattern failure rates, and running online validation that confirmed offline-mined patterns matched on-device aggressor cases.
+    ownership: personal_contribution
+    confidence: verified
+    caveats:
+      - Release reports were a team deliverable to leadership; the deep-dive failure analysis, visualization, and pattern mining were the user's contribution.
+  - id: vision_action_gesture_segmentation
+    statement: Showed that hand-gesture model gains and regressions were masked in aggregate metrics but concentrated in specific gesture types; surfacing these directed on-device QA to the right test areas and expected magnitude of user-perceived change.
+    ownership: personal_contribution
+    confidence: verified
 outcomes:
   - id: vision_outcome_quality
-    statement: Work informed Vision Pro hand-tracking quality improvements associated with missed detections below 2% and false positives below 5 per hour.
-    confidence: imported_resume
+    statement: Helped develop the hand-tracking quality scorecard and confirmed final metrics of missing-pinch rate below 2% and false positives below 5 per hour; contribution was failure-pattern/aggressor discovery and scorecard development, not sole causation.
+    confidence: verified
     caveats:
       - Preserve the distinction between contribution and sole causation.
-      - Confirm metric context before using for a materially different role.
+      - Metric context; false positives are per hour (confirmed by user).
 research:
   - id: research_eccv_slice_discovery
-    title: Fine-grained and grounded error slice discovery for multi-instance vision tasks
+    title: "GH-ESD: Grounded Hypothesis-Driven Error Slice Discovery for Instance-Level Vision Tasks"
     venue: ECCV
     status: accepted
     arxiv: arXiv:2512.24592
+    url: https://arxiv.org/abs/2512.24592
+    contribution_role: experiment contributor (not a listed author)
     confidence: verified
     caveats:
-      - The earlier working title was SliceLens.
+      - User contributed to experiments but is NOT a listed author; never claim authorship or co-authorship.
+      - Earlier working titles were SliceLens and "Fine-grained and grounded error slice discovery for multi-instance vision tasks".
       - A small percentage-table arithmetic error was corrected before camera-ready; the conclusion remained unchanged but the measured improvement was smaller.
 skills:
   - failure analysis

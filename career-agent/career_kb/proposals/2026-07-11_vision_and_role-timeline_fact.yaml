@@ -1,0 +1,111 @@
+proposal_id: 2026-07-11_vision_and_role-timeline_fact
+date: 2026-07-11
+source: user statements in conversation (2026-07-11)
+type: factual_correction
+classification:
+  - atomic evidence correction (vision failure discovery + outcome)
+  - reusable claim correction (vision quality metrics)
+  - experience context (vision timing + role capacity)
+  - profile / career-context (role focus shift) -- HELD, needs title confirmation
+
+# ----------------------------------------------------------------------
+# CHANGE 1 -- exp_apple_vision_failure_discovery.yaml
+# ----------------------------------------------------------------------
+change_1_experience_timing:
+  target_file: career_kb/experiences/apple_vision_failure_discovery.yaml
+  old:
+    role_context: ML Data Scientist
+    (no date_range field)
+    confidence: verified
+  new:
+    role_context: Data Analyst (Apple hand-tracking / Vision Pro)
+    date_range: 2020 to 2023
+    confidence: verified
+  note: >
+    User: this vision work was done 2020-2023 while in a data-analyst
+    capacity; focus later shifted to LLM evaluation.
+
+change_1b_failure_discovery_evidence:
+  target_file: career_kb/experiences/apple_vision_failure_discovery.yaml
+  evidence_id: vision_action_failure_discovery
+  old_statement: >
+    Developed embedding-driven failure discovery using similarity search,
+    clustering, out-of-distribution analysis, and per-position failure analysis.
+  new_statement: >
+    Discovered Vision Pro hand-tracking failure patterns, trends, and
+    aggressors using embedding-driven similarity search, clustering,
+    out-of-distribution analysis, and per-position analysis -- mining failure
+    clusters such as fast/slow pinch, hand geometric orientation, and hand
+    location -- and fed findings back to the model-development team.
+  confidence: verified
+
+change_1c_outcome:
+  target_file: career_kb/experiences/apple_vision_failure_discovery.yaml
+  evidence_id: vision_outcome_quality
+  old:
+    statement: >
+      Work informed Vision Pro hand-tracking quality improvements associated
+      with missed detections below 2% and false positives below 5 per hour.
+    confidence: imported_resume
+  new:
+    statement: >
+      Helped develop the hand-tracking quality scorecard and confirmed final
+      metrics of missing-pinch rate below 2% and false positives below 5 per
+      hour; contribution was failure-pattern/aggressor discovery and scorecard
+      development, not sole causation.
+    confidence: verified
+    caveats:
+      - Preserve the distinction between contribution and sole causation.
+      - Metric context: false positives are per hour (confirmed by user).
+
+# ----------------------------------------------------------------------
+# CHANGE 2 -- claims/vision.yaml
+# ----------------------------------------------------------------------
+change_2_claim:
+  target_file: career_kb/claims/vision.yaml
+  claim_id: claim_vision_quality_metrics
+  old:
+    statement: >
+      Contributed to Vision Pro hand-tracking quality associated with missed
+      detections below 2% and false positives below 5 per hour.
+    confidence: imported_resume
+    risk: high
+    required_qualifiers:
+      - contributed to
+      - metric context must be confirmed
+    forbidden_inferences:
+      - sole causation
+  new:
+    statement: >
+      Contributed to Vision Pro hand-tracking quality -- via failure-pattern
+      and aggressor discovery and quality-scorecard development -- with final
+      missing-pinch rate below 2% and false positives below 5 per hour.
+    confidence: verified
+    risk: medium
+    required_qualifiers:
+      - contributed to
+    forbidden_inferences:
+      - sole causation
+
+# ----------------------------------------------------------------------
+# CLAIMS ENABLED / DISABLED
+# ----------------------------------------------------------------------
+claims_enabled:
+  - claim_vision_quality_metrics now user-verified (was imported_resume, high risk);
+    safe to use with "contributed to" qualifier and per-hour metric.
+claims_disabled: []
+
+caveats_global:
+  - Ambarella entries confirmed accurate by user; no change.
+  - Description-eval ownership/timing still unresolved (see open question).
+
+open_questions:
+  - >
+    Role/title timeline: profile.yaml currently lists a single title
+    "ML Data Scientist" (2020-07, current). User indicates Data Analyst
+    2020-2023 then LLM-evaluation focus. Need exact title(s) and transition
+    date before patching profile.yaml.
+  - >
+    Description-eval project (exp_apple_multimodal_description_eval): still
+    imported_resume with unknown status/ownership; not addressed by this
+    proposal.

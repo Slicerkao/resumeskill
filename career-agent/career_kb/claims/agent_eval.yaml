@@ -48,3 +48,20 @@ claims:
   risk: medium
   forbidden_inferences:
   - finalized production KPI ownership
+- id: claim_eval_production_scale
+  statement: Deployed and scaled LLM-as-judge and agent-as-judge evaluation on internal
+    batch infrastructure, debugging throughput/rate-limit issues and surfacing results
+    into dashboards.
+  supported_by:
+  - agent_action_production_scale
+  confidence: verified
+  role_families:
+  - llm_evaluation
+  - ml_engineering
+  - ai_quality
+  risk: medium
+  required_qualifiers:
+  - operated and scaled on an existing internal platform (Bolt); did not build the
+    platform
+  forbidden_inferences:
+  - built a distributed-systems eval platform from scratch

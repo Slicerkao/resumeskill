@@ -23,6 +23,13 @@ actions:
     statement: Explored metrics including per-turn misalignment with user intent and false updates to inferred user internal state.
     ownership: personal_contribution
     confidence: verified
+  - id: agent_action_production_scale
+    statement: Deployed and scaled LLM-as-judge and agent-as-judge evaluation on Apple's internal batch execution platform (Bolt), debugging throughput/rate-limit issues, and surfaced evaluator outputs into dashboards for stakeholders.
+    ownership: personal_contribution
+    confidence: verified
+    caveats:
+      - Operated and scaled evaluation on an existing internal platform; did not build the platform itself.
+      - Spans the health-AI (LLM-as-judge) and agent-evaluation (agent-as-judge) projects.
 caveats:
   - The project is ongoing; avoid claiming finalized production impact.
   - Do not imply ownership of the product agent or its memory architecture.

@@ -1,0 +1,129 @@
+proposal_id: 2026-07-11_anthropic_eval_new-evidence
+date: 2026-07-11
+source: user statements in conversation (2026-07-11)
+type: new_evidence
+classification: new atomic evidence + new reusable claims (visualization, model-health
+  reporting, production-scale eval execution)
+
+# ======================================================================
+# NEW EVIDENCE -- exp_apple_vision_failure_discovery (2020-2023 work)
+# ======================================================================
+new_evidence_vision:
+  target_file: career_kb/experiences/apple_vision_failure_discovery.yaml
+
+  - id: vision_action_visualization
+    statement: >
+      Built performance-trend, error-cluster, and multimodal-data visualizations
+      in Tableau and Voxel51 (FiftyOne) -- linking embedding-derived error clusters
+      to image collages -- that helped the team see systematic issues such as
+      hand-gesture failure patterns.
+    ownership: personal_contribution
+    confidence: verified
+
+  - id: vision_action_model_health_reporting
+    statement: >
+      For each ML model release, produced leadership-facing reports translating
+      user-experience proxy metrics and regression/improvement deep-dive failure
+      analysis into decision-ready findings -- attributing regressions to specific
+      ML-system components, using embedding clustering on unstructured image data
+      correlated with failures, estimating per-pattern failure rates, and running
+      online validation that confirmed offline-mined patterns matched on-device
+      aggressor cases.
+    ownership: personal_contribution
+    confidence: verified
+    caveats:
+      - Release reports were a team deliverable to leadership; the deep-dive
+        failure analysis, visualization, and pattern mining were the user's
+        contribution.
+
+  - id: vision_action_gesture_segmentation
+    statement: >
+      Showed that hand-gesture model gains and regressions were masked in
+      aggregate metrics but concentrated in specific gesture types; surfacing
+      these directed on-device QA to the right test areas and expected magnitude
+      of user-perceived change.
+    ownership: personal_contribution
+    confidence: verified
+
+# ======================================================================
+# NEW EVIDENCE -- exp_apple_multimodal_agent_eval (current LLM-eval work)
+# ======================================================================
+new_evidence_agent:
+  target_file: career_kb/experiences/apple_agent_eval.yaml
+
+  - id: agent_action_production_scale
+    statement: >
+      Deployed and scaled LLM-as-judge and agent-as-judge evaluation on Apple's
+      internal batch execution platform (Bolt), debugging throughput/rate-limit
+      issues, and surfaced evaluator outputs into dashboards for stakeholders.
+    ownership: personal_contribution
+    confidence: verified
+    caveats:
+      - Operated and scaled evaluation on an existing internal platform; did not
+        build the platform itself.
+      - Spans the health-AI (LLM-as-judge) and agent-evaluation (agent-as-judge)
+        projects.
+
+# ======================================================================
+# NEW CLAIMS
+# ======================================================================
+new_claims_vision:
+  target_file: career_kb/claims/vision.yaml
+  - id: claim_vision_visualization
+    statement: >
+      Built performance-trend, error-cluster, and multimodal-data visualizations
+      (Tableau, Voxel51/FiftyOne image-collage clustering) that stakeholders used
+      to identify systematic model failure patterns.
+    supported_by: [vision_action_visualization]
+    confidence: verified
+    role_families: [data_visualization, ml_evaluation, computer_vision]
+    risk: low
+  - id: claim_vision_model_health_reporting
+    statement: >
+      Produced leadership-facing model-release reports translating deep-dive
+      failure analysis and regression/improvement attribution into decision
+      metrics -- including embedding-clustering diagnosis of unstructured image
+      data and online validation of offline-mined failure patterns.
+    supported_by: [vision_action_model_health_reporting, vision_action_gesture_segmentation]
+    confidence: verified
+    role_families: [ml_evaluation, responsible_ai, data_visualization]
+    risk: medium
+    required_qualifiers:
+      - reports were team deliverables; the failure analysis and pattern mining
+        were the personal contribution
+
+new_claims_agent:
+  target_file: career_kb/claims/agent_eval.yaml
+  - id: claim_eval_production_scale
+    statement: >
+      Deployed and scaled LLM-as-judge and agent-as-judge evaluation on internal
+      batch infrastructure, debugging throughput/rate-limit issues and surfacing
+      results into dashboards.
+    supported_by: [agent_action_production_scale]
+    confidence: verified
+    role_families: [llm_evaluation, ml_engineering, ai_quality]
+    risk: medium
+    required_qualifiers:
+      - operated and scaled on an existing internal platform (Bolt); did not build
+        the platform
+    forbidden_inferences:
+      - built a distributed-systems eval platform from scratch
+
+# ======================================================================
+claims_enabled:
+  - claim_vision_visualization -> covers JD P2 (data viz) + R3 (dashboards)
+  - claim_vision_model_health_reporting -> covers R3 (model-health monitoring),
+    R4 (debug/attribute regressions), R8 (communicate to leadership), P4 (monitoring)
+  - claim_eval_production_scale -> covers M1 (Python production), M2 (operate infra
+    at scale), R2 (partial: eval execution at scale), R4 (infra debugging)
+claims_disabled: []
+
+open_questions:
+  - >
+    Official Apple title 2020-2023: was it "Data Analyst" (title changed to
+    "ML Data Scientist" later) or "ML Data Scientist" throughout with the work
+    evolving? This decides the experience-section label and whether to revert the
+    role_context edit made earlier today.
+  - >
+    Confirm the exact chart type described as "waydogram" (waterfall? Sankey?)
+    before naming it on the resume; currently generalized to "visualizations."
