@@ -1,0 +1,80 @@
+schema_version: 1
+job_id: anthropic_research_engineer_evals
+source_resume: resume/current/resume.tex
+target_role: Research Engineer, Evaluations (Anthropic)
+sections:
+  experience:
+    - organization: Apple
+      role: ML Data Scientist
+      date_range: 2020 to present
+      bullets:
+        - text: Built an agent-as-judge workflow for long multimodal conversation transcripts and a simulated-user agent to stress-test an open-ended multimodal conversational agent, uncovering per-turn misalignment with user intent and false updates to inferred user state.
+          claim_ids:
+            - claim_agent_judge
+            - claim_agent_user_simulation
+            - claim_agent_metrics
+          evidence_ids:
+            - agent_action_judge
+            - agent_action_simulation
+            - agent_action_metrics
+        - text: Deployed and scaled LLM-as-judge and agent-as-judge evaluation on internal batch infrastructure, debugging throughput and rate-limit issues and surfacing evaluator results into dashboards.
+          claim_ids:
+            - claim_eval_production_scale
+          evidence_ids:
+            - agent_action_production_scale
+        - text: Built expert-aligned evaluation for a multimodal health AI product, an auditable reference-based multi-stage LLM evaluator improved through DSPy-style prompt iteration and expert review, reaching 90% alignment with health experts on a curated 40-example gold set.
+          claim_ids:
+            - claim_health_expert_aligned_eval
+            - claim_health_auditable_judge
+            - claim_health_prompt_iteration
+            - claim_health_90_alignment
+          evidence_ids:
+            - health_action_goldset
+            - health_action_labeling
+            - health_action_judge
+            - health_action_iteration
+            - health_outcome_alignment
+        - text: Produced leadership-facing model-release reports and dashboards translating deep-dive failure analysis and regression/improvement attribution into decision metrics, including embedding-clustering diagnosis of unstructured image data and online validation of offline-mined failure patterns.
+          claim_ids:
+            - claim_vision_model_health_reporting
+          evidence_ids:
+            - vision_action_model_health_reporting
+            - vision_action_gesture_segmentation
+        - text: Built performance-trend, error-cluster, and multimodal-data visualizations (Tableau, Voxel51/FiftyOne image-collage clustering) that stakeholders used to identify systematic model failure patterns.
+          claim_ids:
+            - claim_vision_visualization
+          evidence_ids:
+            - vision_action_visualization
+        - text: Developed embedding-driven failure discovery (similarity search, clustering, OOD, per-position analysis) mining failure clusters such as fast/slow pinch and hand orientation; contributed to Vision Pro hand-tracking quality with final missing-pinch rate below 2% and false positives below 5 per hour.
+          claim_ids:
+            - claim_vision_failure_discovery
+            - claim_vision_quality_metrics
+          evidence_ids:
+            - vision_action_failure_discovery
+            - vision_outcome_quality
+    - organization: Ambarella
+      role: Algorithm and Architecture Intern, Deep Learning Compression
+      date_range: 2019-06 to 2019-08
+      bullets:
+        - text: Developed a saliency-based neural-network quantization heuristic that reduced an exponential search formulation to a linear-time method, and proposed a mixed-precision quantization prediction algorithm integrated into a company software product.
+          claim_ids:
+            - claim_ambarella_saliency
+            - claim_ambarella_mixed_precision
+          evidence_ids:
+            - ambarella_action_saliency
+            - ambarella_action_mixed_precision
+  research:
+    - organization: ECCV
+      role: Publication
+      bullets:
+        - text: Contributed experiments to ECCV-accepted research (GH-ESD) on grounded, hypothesis-driven error-slice discovery for instance-level vision tasks.
+          claim_ids:
+            - claim_vision_eccv
+          evidence_ids:
+            - research_eccv_slice_discovery
+        - text: Designed and ran model-repair experiments, fine-tuning vision models on targeted error slices and benchmarking improvements against alternative slice-discovery approaches.
+          claim_ids:
+            - claim_vision_model_repair
+          evidence_ids:
+            - vision_action_model_repair
+approval_status: draft_pending_user_approval

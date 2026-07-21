@@ -38,7 +38,8 @@ claims:
   risk: low
 - id: claim_agent_metrics
   statement: Designed and explored metrics for per-turn user-intent misalignment and
-    false updates to inferred user state.
+    false updates to the agent's inferred internal state of the user, estimating their
+    occurrence rates at scale.
   supported_by:
   - agent_action_metrics
   confidence: verified
@@ -65,3 +66,18 @@ claims:
     platform
   forbidden_inferences:
   - built a distributed-systems eval platform from scratch
+- id: claim_agent_scenario_generation
+  statement: Built evaluators and targeted scenario generators to probe agent weaknesses
+    such as visual memory and sycophancy.
+  supported_by:
+  - agent_action_scenario_generation
+  confidence: verified
+  role_families:
+  - agent_evaluation
+  - ai_quality
+  - llm_evaluation
+  risk: medium
+  required_qualifiers:
+  - ongoing work; observed sample cases, not finalized measured rates
+  forbidden_inferences:
+  - solved or measured production sycophancy rate

@@ -20,9 +20,15 @@ actions:
     ownership: personal_contribution
     confidence: verified
   - id: agent_action_metrics
-    statement: Explored metrics including per-turn misalignment with user intent and false updates to inferred user internal state.
+    statement: Explored metrics including per-turn misalignment with user intent and false updates to the agent's inferred internal state of the user, and ran a version at scale to estimate their occurrence rates.
     ownership: personal_contribution
     confidence: verified
+  - id: agent_action_scenario_generation
+    statement: Built evaluators and targeted scenario generators to probe specific agent weaknesses such as visual memory and sycophancy, surfacing sample cases that exhibit these failure modes.
+    ownership: personal_contribution
+    confidence: verified
+    caveats:
+      - Ongoing team work; observed sample cases rather than finalized measured rates.
   - id: agent_action_production_scale
     statement: Deployed and scaled LLM-as-judge and agent-as-judge evaluation on Apple's internal batch execution platform (Bolt), debugging throughput/rate-limit issues, and surfaced evaluator outputs into dashboards for stakeholders.
     ownership: personal_contribution

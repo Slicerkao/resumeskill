@@ -1,0 +1,59 @@
+proposal_id: 2026-07-11_agent_scenario-generation_new-evidence
+date: 2026-07-11
+source: user statements in conversation (2026-07-11)
+type: new_evidence
+classification: new atomic evidence + claim (targeted scenario generation for agent
+  weaknesses) and enrichment of the agent-metrics evidence/claim (occurrence-rate at scale)
+
+enrich_evidence:
+  target_file: career_kb/experiences/apple_agent_eval.yaml
+  evidence_id: agent_action_metrics
+  old: >
+    Explored metrics including per-turn misalignment with user intent and false
+    updates to inferred user internal state.
+  new: >
+    Explored metrics including per-turn misalignment with user intent and false
+    updates to the agent's inferred internal state of the user, and ran a version
+    at scale to estimate their occurrence rates.
+
+new_evidence:
+  target_file: career_kb/experiences/apple_agent_eval.yaml
+  - id: agent_action_scenario_generation
+    statement: >
+      Built evaluators and targeted scenario generators to probe specific agent
+      weaknesses such as visual memory and sycophancy, surfacing sample cases that
+      exhibit these failure modes.
+    ownership: personal_contribution
+    confidence: verified
+    caveats:
+      - Ongoing team work; observed sample cases rather than finalized measured rates.
+
+enrich_claim:
+  target_file: career_kb/claims/agent_eval.yaml
+  claim_id: claim_agent_metrics
+  old_statement: >
+    Designed and explored metrics for per-turn user-intent misalignment and false
+    updates to inferred user state.
+  new_statement: >
+    Designed and explored metrics for per-turn user-intent misalignment and false
+    updates to the agent's inferred internal state of the user, estimating their
+    occurrence rates at scale.
+
+new_claim:
+  target_file: career_kb/claims/agent_eval.yaml
+  - id: claim_agent_scenario_generation
+    statement: >
+      Built evaluators and targeted scenario generators to probe agent weaknesses
+      such as visual memory and sycophancy.
+    supported_by: [agent_action_scenario_generation]
+    confidence: verified
+    role_families: [agent_evaluation, ai_quality, llm_evaluation]
+    risk: medium
+    required_qualifiers:
+      - ongoing work; observed sample cases, not finalized measured rates
+    forbidden_inferences:
+      - solved or measured production sycophancy rate
+
+claims_enabled:
+  - claim_agent_scenario_generation -> covers JD R1 (evaluate safety properties),
+    "design evals from scratch", and safety/alignment framing

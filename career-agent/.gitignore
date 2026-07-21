@@ -16,9 +16,7 @@ __pycache__/
 *.pyc
 .venv/
 
-# Generated application packets
-outputs/*
-!outputs/.gitkeep
+# Generated application packets are tracked (see outputs/)
 
 # Local scratch
 inbox/*
