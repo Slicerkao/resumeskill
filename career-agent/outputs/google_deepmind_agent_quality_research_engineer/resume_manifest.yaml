@@ -1,0 +1,43 @@
+schema_version: 1
+job_id: google_deepmind_agent_quality_research_engineer
+source_resume: resume/current/resume.tex
+target_role: Research Engineer, Agent Quality at Google DeepMind
+sections:
+  experience:
+    - organization: Apple
+      role: ML Data Scientist
+      date_range: 2020-07 to present
+      bullets:
+        - text: Built simulated-user and agent-as-judge systems to evaluate an open-ended multimodal conversational agent over long interactions and surface scenario-specific failures.
+          claim_ids: [claim_agent_user_simulation, claim_agent_judge]
+          evidence_ids: [agent_action_simulation, agent_action_judge]
+        - text: Translated human-factors research into task protocols and metrics for per-turn intent misalignment and false updates to inferred user state; evaluated factual consistency and tool-call behavior at scale.
+          claim_ids: [claim_agent_human_factors, claim_agent_metrics, claim_eval_factual_consistency_tool_calls]
+          evidence_ids: [agent_action_human_factors, agent_action_metrics, agent_action_factual_consistency_tool_calls]
+        - text: Built targeted scenario generators and evaluators for visual-memory and sycophancy weaknesses; systematic failure patterns changed subsequent development direction.
+          claim_ids: [claim_agent_scenario_generation, claim_agent_development_direction]
+          evidence_ids: [agent_action_scenario_generation, agent_outcome_development_direction]
+        - text: Scaled LLM- and agent-as-judge evaluation on an existing internal batch platform, debugging throughput and rate limits, versioning evaluators, and reporting performance through dashboards.
+          claim_ids: [claim_eval_production_scale, claim_health_evaluator_versioning]
+          evidence_ids: [agent_action_production_scale, health_action_evaluator_versioning]
+        - text: Developed a reference-based LLM evaluator and expert/non-expert human-validation workflow used internally for performance reporting and failure discovery; reached 90% expert alignment on 40 examples.
+          claim_ids: [claim_health_auditable_judge, claim_health_expert_aligned_eval, claim_health_internal_production_evaluator, claim_health_90_alignment]
+          evidence_ids: [health_action_goldset, health_action_labeling, health_action_judge, health_outcome_internal_production_use, health_outcome_alignment]
+        - text: Implemented large-scale embedding-index experiments to curate segmentation training data from an internal image corpus and delivered the resulting dataset to a foundation-model team.
+          claim_ids: [claim_segmentation_embedding_data_curation]
+          evidence_ids: [segmentation_action_embedding_index, segmentation_outcome_dataset_delivery]
+    - organization: Ambarella
+      role: Algorithm and Architecture Intern - Deep Learning Compression
+      date_range: 2019-06 to 2019-08
+      bullets:
+        - text: Developed a saliency-based neural-network quantization heuristic that reduced an exponential search formulation to a linear-time method, and proposed a mixed-precision algorithm integrated into company software.
+          claim_ids: [claim_ambarella_saliency, claim_ambarella_mixed_precision]
+          evidence_ids: [ambarella_action_saliency, ambarella_action_mixed_precision]
+  research:
+    - organization: Apple / ECCV
+      role: Experiment contributor
+      bullets:
+        - text: Contributed experiments to ECCV-accepted research on grounded, hypothesis-driven error-slice discovery for instance-level vision tasks.
+          claim_ids: [claim_vision_eccv]
+          evidence_ids: [research_eccv_slice_discovery]
+approval_status: generated_from_existing_verified_claims
