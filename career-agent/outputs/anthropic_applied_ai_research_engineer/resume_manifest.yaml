@@ -1,0 +1,43 @@
+schema_version: 1
+job_id: anthropic_applied_ai_research_engineer
+source_resume: resume/current/resume.tex
+target_role: Applied AI, Research Engineer at Anthropic
+sections:
+  experience:
+    - organization: Apple
+      role: ML Data Scientist
+      date_range: 2020-07 to present
+      bullets:
+        - text: Built an internal chat-interface prototype combining natural-language investigation, VLM-as-judge retrieval of targeted vision-model failure patterns, and Voxel51/FiftyOne image-collage visualization.
+          claim_ids: [claim_vision_llm_failure_analysis_prototype]
+          evidence_ids: [vision_action_llm_failure_analysis_prototype]
+        - text: Built simulated-user and agent-as-judge workflows to probe a multimodal conversational agent over long interactions, with targeted scenarios for visual-memory, sycophancy, factual-consistency, and tool-call failures.
+          claim_ids: [claim_agent_user_simulation, claim_agent_judge, claim_agent_scenario_generation, claim_eval_factual_consistency_tool_calls]
+          evidence_ids: [agent_action_simulation, agent_action_judge, agent_action_scenario_generation, agent_action_factual_consistency_tool_calls]
+        - text: Developed a reference-based LLM evaluator and expert/non-expert validation workflow used internally for performance reporting and failure discovery; reached 90% expert alignment on a 40-example gold set.
+          claim_ids: [claim_health_auditable_judge, claim_health_expert_aligned_eval, claim_health_internal_production_evaluator, claim_health_90_alignment]
+          evidence_ids: [health_action_goldset, health_action_labeling, health_action_judge, health_outcome_internal_production_use, health_outcome_alignment]
+        - text: Translated user-research needs into engineering requirements and labeling instructions while coordinating UX research, engineering, Data Ops, experts, and human-in-the-loop validation.
+          claim_ids: [claim_health_cross_functional_eval_leadership]
+          evidence_ids: [health_action_cross_functional_translation]
+        - text: Built targeted agent scenarios whose systematic failure patterns changed subsequent development direction; scaled versioned LLM and agent judges on existing internal batch infrastructure and dashboards.
+          claim_ids: [claim_agent_scenario_generation, claim_agent_development_direction, claim_eval_production_scale, claim_health_evaluator_versioning]
+          evidence_ids: [agent_action_scenario_generation, agent_outcome_development_direction, agent_action_production_scale, health_action_evaluator_versioning]
+        - text: Produced leadership-facing model-release reports translating deep-dive failure analysis and regression attribution into decision-ready metrics, including online validation of offline-mined patterns.
+          claim_ids: [claim_vision_model_health_reporting]
+          evidence_ids: [vision_action_model_health_reporting, vision_action_gesture_segmentation]
+    - organization: Ambarella
+      role: Algorithm and Architecture Intern - Deep Learning Compression
+      date_range: 2019-06 to 2019-08
+      bullets:
+        - text: Developed a saliency-based neural-network quantization heuristic that reduced an exponential search formulation to a linear-time method, and proposed a mixed-precision algorithm integrated into company software.
+          claim_ids: [claim_ambarella_saliency, claim_ambarella_mixed_precision]
+          evidence_ids: [ambarella_action_saliency, ambarella_action_mixed_precision]
+  research:
+    - organization: Apple / ECCV 2026
+      role: Listed author; experiment contributor
+      bullets:
+        - text: Listed author and experiment contributor on the ECCV 2026 publication GH-ESD, which develops grounded, hypothesis-driven error-slice discovery for instance-level vision tasks.
+          claim_ids: [claim_vision_eccv]
+          evidence_ids: [research_eccv_slice_discovery]
+approval_status: generated_from_approved_and_existing_verified_claims
