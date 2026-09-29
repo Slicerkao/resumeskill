@@ -1,0 +1,43 @@
+schema_version: 1
+job_id: meta_research_engineer_safety_evaluation
+source_resume: resume/current/resume.tex
+target_role: Research Engineer, Safety Evaluation at Meta Superintelligence Labs
+sections:
+  experience:
+    - organization: Apple
+      role: ML Data Scientist
+      date_range: 2020-07 to present
+      bullets:
+        - text: Built simulated-user, agent-as-judge, targeted-scenario, and behavioral-metric workflows for an open-ended multimodal conversational agent, measuring intent misalignment and false inferred-state updates at scale.
+          claim_ids: [claim_agent_user_simulation, claim_agent_judge, claim_agent_scenario_generation, claim_agent_metrics]
+          evidence_ids: [agent_action_simulation, agent_action_judge, agent_action_scenario_generation, agent_action_metrics]
+        - text: Evaluated factual consistency and tool-call behavior and built targeted evaluators for visual-memory and sycophancy weaknesses; systematic failure patterns changed subsequent development direction.
+          claim_ids: [claim_eval_factual_consistency_tool_calls, claim_agent_scenario_generation, claim_agent_development_direction]
+          evidence_ids: [agent_action_factual_consistency_tool_calls, agent_action_scenario_generation, agent_outcome_development_direction]
+        - text: Scaled LLM- and agent-as-judge evaluation on an existing internal batch platform, resolving throughput and rate-limit issues, shipping versioned evaluator updates, and surfacing results in dashboards.
+          claim_ids: [claim_eval_production_scale, claim_health_evaluator_versioning]
+          evidence_ids: [agent_action_production_scale, health_action_evaluator_versioning]
+        - text: Developed an auditable LLM evaluator used in an internal production workflow, combining expert-calibrated gold sets and human-in-the-loop validation; reached 90% expert alignment on 40 examples.
+          claim_ids: [claim_health_auditable_judge, claim_health_internal_production_evaluator, claim_health_90_alignment, claim_health_expert_aligned_eval]
+          evidence_ids: [health_action_goldset, health_action_labeling, health_action_judge, health_outcome_internal_production_use, health_outcome_alignment]
+        - text: Designed Bayesian per-subject fairness analysis using Beta posteriors to estimate demographic-gap risk against a 10% product threshold.
+          claim_ids: [claim_vision_fairness]
+          evidence_ids: [vision_action_fairness]
+        - text: Built SQL/AWS Athena metric pipelines and leadership-facing model-release reports combining failure-pattern analysis, regression attribution, and online validation of offline-mined risks.
+          claim_ids: [claim_vision_athena_metrics_pipeline, claim_vision_model_health_reporting, claim_vision_visualization]
+          evidence_ids: [vision_action_athena_metric_pipeline, vision_action_model_health_reporting, vision_action_gesture_segmentation, vision_action_visualization]
+    - organization: Ambarella
+      role: Algorithm and Architecture Intern - Deep Learning Compression
+      date_range: 2019-06 to 2019-08
+      bullets:
+        - text: Developed a saliency-based neural-network quantization heuristic that reduced an exponential search formulation to a linear-time method, and proposed a mixed-precision algorithm integrated into company software.
+          claim_ids: [claim_ambarella_saliency, claim_ambarella_mixed_precision]
+          evidence_ids: [ambarella_action_saliency, ambarella_action_mixed_precision]
+  research:
+    - organization: Apple / ECCV 2026
+      role: Listed author; experiment contributor
+      bullets:
+        - text: Listed author and experiment contributor on the ECCV 2026 publication GH-ESD, which develops grounded, hypothesis-driven error-slice discovery for instance-level vision tasks.
+          claim_ids: [claim_vision_eccv]
+          evidence_ids: [research_eccv_slice_discovery]
+approval_status: generated_from_existing_approved_claims
